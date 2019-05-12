@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataPemeriksaanAnaksTable extends Migration
+class CreateDataPemeriksaanIbusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CreateDataPemeriksaanAnaksTable extends Migration
      */
     public function up()
     {
-        Schema::create('data_pemeriksaan_anaks', function (Blueprint $table) {
+        Schema::create('data_pemeriksaan_ibus', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('anak_id')->unsigned();
             $table->integer('ibu_id')->unsigned();
             $table->integer('berat_badan')->unsigned();
             $table->integer('tinggi_badan')->unsigned();
-            $table->string('imunisasi');
+            $table->string('tensi');
+            $table->float('lila');
             $table->timestamps();
 
-            $table->foreign('ibu_id')->references('id')->on('ibus')->onDelete('CASCADE');
-            $table->foreign('anak_id')->references('id')->on('anaks')->onDelete('CASCADE');
+            $table->foreign('ibu_id')->references('id')->on('ibus')->onDelete('CASCADE'); 
+            
         });
     }
 
@@ -34,6 +34,6 @@ class CreateDataPemeriksaanAnaksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_pemeriksaan_anaks');
+        Schema::dropIfExists('data_pemeriksaan_ibus');
     }
 }
