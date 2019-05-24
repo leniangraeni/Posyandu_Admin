@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/jadwal/tambah', 'JadwalController@tambahJadwal')->name('jadwal.tambah');
+Route::post('/jadwal/tambah', 'JadwalController@simpanJadwal')->name('jadwal.simpan');

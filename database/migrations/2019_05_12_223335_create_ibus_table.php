@@ -28,6 +28,7 @@ class CreateIbusTable extends Migration
             $table->integer('no_jkn')->unsigned();
             $table->string('gol_darah');
             $table->string('status_kematian');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
