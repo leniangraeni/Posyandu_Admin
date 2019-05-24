@@ -16,13 +16,11 @@ class CreateDataPemeriksaanAnaksTable extends Migration
         Schema::create('data_pemeriksaan_anaks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('anak_id')->unsigned();
-            $table->integer('ibu_id')->unsigned();
             $table->integer('berat_badan')->unsigned();
             $table->integer('tinggi_badan')->unsigned();
             $table->string('imunisasi');
             $table->timestamps();
 
-            $table->foreign('ibu_id')->references('id')->on('ibus')->onDelete('CASCADE');
             $table->foreign('anak_id')->references('id')->on('anaks')->onDelete('CASCADE');
         
         });

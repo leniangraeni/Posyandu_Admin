@@ -54,7 +54,7 @@
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li><a href="{{ route('jadwal.tambah') }}">Tambah Jadwal</a></li>
-                            <li><a href="{{ route('jadwal.tambah') }}">Tambah User</a></li>
+                            <li><a href="{{ route('ibu.tambah') }}">Tambah Data Ibu</a></li>
                             <li><a href="{{ route('jadwal.tambah') }}">Data Pemeriksaan</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

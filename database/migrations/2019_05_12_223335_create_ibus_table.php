@@ -15,7 +15,7 @@ class CreateIbusTable extends Migration
     {
         Schema::create('ibus', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
+            $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('no_kk')->unsigned();
