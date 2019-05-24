@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Tambah Jadwal Baru</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('jadwal.simpan')}}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('jadwal.simpan') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group">
