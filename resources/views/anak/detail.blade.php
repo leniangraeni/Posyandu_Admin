@@ -14,6 +14,7 @@
                             <p>{{ $anak->gol_darah}}</p>
                         </div>
                     </div>
+                    <a href="{{ route('pemeriksaan_anak.index') }}">Lihat Data Pemeriksaan</a>
             </div>
         </div>
     </div>

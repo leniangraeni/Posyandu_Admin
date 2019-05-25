@@ -53,7 +53,7 @@ class AnakController extends Controller
     public function updateDataAnak($id)
     {
         $anak = Anak::find($id);
-        Anak::update([
+        $anak::update([
             'ibu_id' => request('ibu_id'),
             'nama' => request('nama'),
             'nik' => request('nik'),

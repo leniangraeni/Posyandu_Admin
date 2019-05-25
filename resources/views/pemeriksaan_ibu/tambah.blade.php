@@ -7,12 +7,12 @@
             <div class="panel panel-default">
             <div class="panel-heading">Tambah Data Pemeriksaan Anak</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('pemeriksaan_anak.simpan', $anak) }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('pemeriksaan_ibu.simpan', $ibu) }}">
                         {{ csrf_field() }}
 
                         <div class="form-group">
                             <div class="col-md-6">
-                                <input type="hidden" class="form-control" name="anak_id" value="{{ $anak->id }}">  
+                                <input type="hidden" class="form-control" name="ibu_id" value="{{ $ibu->id }}">  
                             </div>
                         </div>
 
@@ -41,10 +41,18 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="tanggal_lahir" class="col-md-4 control-label">Imunisasi</label>
+                            <label for="tanggal_lahir" class="col-md-4 control-label">Tensi</label>
 
-                            <div class="col-md-6">
-                                <input type="date" class="form-control" name="imunisasi">  
+                        <div class="col-md-6">
+                                <input type="text" class="form-control" name="tensi">  
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tanggal_lahir" class="col-md-4 control-label">Lila</label>
+
+                        <div class="col-md-6">
+                                <input type="text" class="form-control" name="lila">  
                             </div>
                         </div>
 

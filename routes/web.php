@@ -34,8 +34,6 @@ Route::get('/ibu/{id}/edit', 'IbuController@editDataIbu')->name('ibu.edit');
 Route::patch('/ibu/{id}/edit', 'IbuController@updateDataIbu')->name('ibu.update');
 Route::delete('/ibu/{id}/hapus', 'IbuController@hapusDataIbu')->name('ibu.hapus');
 
-Route::post('/ibu/{id}/anak', 'AnakController@simpanDataAnak')->name('anak.simpan');
-
 Route::get('/anak/tambah/{ibu}', 'AnakController@tambahDataAnak')->name('anak.tambah');
 Route::post('/anak/tambah/{ibu}', 'AnakController@simpanDataAnak')->name('anak.simpan');
 Route::get('/anak/{ibu}', 'AnakController@readDataAnak')->name('anak.index');
@@ -43,3 +41,19 @@ Route::get('/anak/{id}', 'AnakController@detailDataAnak')->name('anak.detail');
 Route::get('/anak/{id}/edit', 'AnakController@editDataAnak')->name('anak.edit');
 Route::patch('/anak/{id}/edit', 'AnakController@updateDataAnak')->name('anak.update');
 Route::delete('/anak/{id}/hapus', 'AnakController@hapusDataAnak')->name('anak.hapus');
+
+Route::get('/pemeriksaan_anak/{anak}', 'DataPemeriksaanAnakController@tambahPemeriksaanAnak')->name('pemeriksaan_anak.tambah');
+Route::post('/pemeriksaan_anak/{anak}', 'DataPemeriksaanAnakController@simpanPemeriksaanAnak')->name('pemeriksaan_anak.simpan');
+Route::get('/pemeriksaan_anak', 'DataPemeriksaanAnakController@readPemeriksaanAnak')->name('pemeriksaan_anak.index');
+Route::get('/pemeriksaan_anak/{id}', 'DataPemeriksaanAnakController@detailPemeriksaanAnak')->name('pemeriksaan_anak.detail');
+Route::get('/pemeriksaan_anak/{id}/edit', 'DataPemeriksaanAnakController@editPemeriksaanAnak')->name('pemeriksaan_anak.edit');
+Route::patch('/pemeriksaan_anak/{id}/edit', 'DataPemeriksaanAnakController@updatePemeriksaanAnak')->name('pemeriksaan_anak.update');
+Route::delete('/pemeriksaan_anak/{id}/hapus', 'DataPemeriksaanAnakController@hapusPemeriksaanAnak')->name('pemeriksaan_anak.hapus');
+
+Route::get('/pemeriksaan_ibu/{ibu}', 'DataPemeriksaanIbuController@tambahPemeriksaanIbu')->name('pemeriksaan_ibu.tambah');
+Route::post('/pemeriksaan_ibu/{ibu}', 'DataPemeriksaanIbuController@simpanPemeriksaanIbu')->name('pemeriksaan_ibu.simpan');
+Route::get('/pemeriksaan_ibu', 'DataPemeriksaanIbuController@readPemeriksaanIbu')->name('pemeriksaan_ibu.index');
+Route::get('/pemeriksaan_ibu/{id}', 'DataPemeriksaanIbuController@detailPemeriksaanIbu')->name('pemeriksaan_ibu.detail');
+Route::get('/pemeriksaan_ibu/{id}/edit', 'DataPemeriksaanIbuController@editPemeriksaanIbu')->name('pemeriksaan_ibu.edit');
+Route::patch('/pemeriksaan_ibu/{id}/edit', 'DataPemeriksaanIbuController@updatePemeriksaanIbu')->name('pemeriksaan_ibu.update');
+Route::delete('/pemeriksaan_ibu/{id}/hapus', 'DataPemeriksaanIbuController@hapusPemeriksaanIbu')->name('pemeriksaan_ibu.hapus');

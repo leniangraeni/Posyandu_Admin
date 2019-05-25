@@ -17,11 +17,7 @@
                                 </form>
                                
                             </div>
-                            <div class="">
-                                    <a href="">Lihat Data Pemeriksaan</a>
-                            </div>
                     </div>
-
                 </div>
             @endforeach
         </div>
