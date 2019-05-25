@@ -17,7 +17,6 @@ class IbuController extends Controller
     public function simpanDataIbu()
     {
         Ibu::create([
-            'tanggal' => request('tanggal'),
             'name' => request('name'),
             'email' => request('email'),
             'password' => request('password'),
@@ -44,6 +43,13 @@ class IbuController extends Controller
         return view('ibu.index', compact('ibu'));
     }
 
+    public function detailDataIbu($id)
+    {
+        $ibu = Ibu::find($id);
+
+        return view('ibu.detail', compact('ibu'));
+    }
+    
     public function editDataIbu($id)
     {
         $ibu = Ibu::find($id);
@@ -56,7 +62,6 @@ class IbuController extends Controller
         $ibu = Ibu::find($id);
 
         $ibu->update([
-           'tanggal' => request('tanggal'),
             'name' => request('name'),
             'email' => request('email'),
             'password' => request('password'),

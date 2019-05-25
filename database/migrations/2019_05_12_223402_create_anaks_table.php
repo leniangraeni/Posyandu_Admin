@@ -17,7 +17,7 @@ class CreateAnaksTable extends Migration
             $table->increments('id');
             $table->integer('ibu_id')->unsigned();
             $table->string('nama');
-            $table->integer('nik')->unsigned();
+            $table->string('nik');
             $table->string('no_akta_kelahiran');
             $table->date('tanggal_lahir');
             $table->string('tempat_lahir');

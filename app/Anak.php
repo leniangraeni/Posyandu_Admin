@@ -8,4 +8,9 @@ class Anak extends Model
 {
     protected $fillable = ['ibu_id', 'nama', 'nik', 'no_akta_kelahiran', 'tanggal_lahir',
                             'tempat_lahir', 'gol_darah'];
+
+    public function ibu()
+    {
+        return $this->belongsTo(Ibu::class);
+    }
 }

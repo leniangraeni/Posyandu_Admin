@@ -20,6 +20,7 @@ class CreateDataPemeriksaanIbusTable extends Migration
             $table->integer('tinggi_badan')->unsigned();
             $table->string('tensi');
             $table->float('lila');
+            $table->date('tanggal_pemeriksaan');
             $table->timestamps();
 
             $table->foreign('ibu_id')->references('id')->on('ibus')->onDelete('CASCADE'); 

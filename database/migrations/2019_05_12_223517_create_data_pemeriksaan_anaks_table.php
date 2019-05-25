@@ -19,6 +19,7 @@ class CreateDataPemeriksaanAnaksTable extends Migration
             $table->integer('berat_badan')->unsigned();
             $table->integer('tinggi_badan')->unsigned();
             $table->string('imunisasi');
+            $table->date('tanggal_pemeriksaan');
             $table->timestamps();
 
             $table->foreign('anak_id')->references('id')->on('anaks')->onDelete('CASCADE');

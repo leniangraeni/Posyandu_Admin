@@ -29,6 +29,17 @@ Route::delete('/jadwal/{id}/hapus', 'JadwalController@hapusJadwal')->name('jadwa
 Route::get('/ibu/tambah', 'IbuController@tambahDataIbu')->name('ibu.tambah');
 Route::post('/ibu/tambah', 'IbuController@simpanDataIbu')->name('ibu.simpan');
 Route::get('/ibu', 'IbuController@readDataIbu')->name('ibu.index');
+Route::get('/ibu/{id}', 'IbuController@detailDataIbu')->name('ibu.detail');
 Route::get('/ibu/{id}/edit', 'IbuController@editDataIbu')->name('ibu.edit');
 Route::patch('/ibu/{id}/edit', 'IbuController@updateDataIbu')->name('ibu.update');
 Route::delete('/ibu/{id}/hapus', 'IbuController@hapusDataIbu')->name('ibu.hapus');
+
+Route::post('/ibu/{id}/anak', 'AnakController@simpanDataAnak')->name('anak.simpan');
+
+Route::get('/anak/tambah/{ibu}', 'AnakController@tambahDataAnak')->name('anak.tambah');
+Route::post('/anak/tambah/{ibu}', 'AnakController@simpanDataAnak')->name('anak.simpan');
+Route::get('/anak/{ibu}', 'AnakController@readDataAnak')->name('anak.index');
+Route::get('/anak/{id}', 'AnakController@detailDataAnak')->name('anak.detail');
+Route::get('/anak/{id}/edit', 'AnakController@editDataAnak')->name('anak.edit');
+Route::patch('/anak/{id}/edit', 'AnakController@updateDataAnak')->name('anak.update');
+Route::delete('/anak/{id}/hapus', 'AnakController@hapusDataAnak')->name('anak.hapus');

@@ -18,14 +18,14 @@ class CreateIbusTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('no_kk')->unsigned();
-            $table->integer('nik')->unsigned();
+            $table->string('no_kk');
+            $table->string('nik');
             $table->string('alamat');
-            $table->integer('no_telp')->unsigned();
+            $table->string('no_telp');
             $table->string('nama_suami');
             $table->date('tanggal_lahir');
             $table->string('tempat_lahir');
-            $table->integer('no_jkn')->unsigned();
+            $table->string('no_jkn');
             $table->string('gol_darah');
             $table->string('status_kematian');
             $table->rememberToken();
