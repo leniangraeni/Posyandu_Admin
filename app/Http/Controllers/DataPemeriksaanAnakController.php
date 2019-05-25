@@ -28,15 +28,17 @@ class DataPemeriksaanAnakController extends Controller
         return redirect()->route('anak.detail', compact('anak'));
     }
 
-    public function readPemeriksaanAnak(Anak $anak)
+    public function readPemeriksaanAnak()
     {
-        $pemeriksaan_anak = DataPemeriksaanAnak::where('anak_id', $anak->id)->get();
-        return view('pemeriksaan_anak.index', compact('pemeriksan_anak'));
+        $pemeriksaan_anak = DataPemeriksaanAnak::all();
+        return $pemeriksaan_anak;
+        return view('pemeriksaan_anak.index', compact('pemeriksaan_anak'));
     }
 
     public function detailPemeriksaanAnak($id)
     {
-        $pemeriksaan_anak = DataPemeriksaanAnak::find($id);
+        $pemeriksaan_anak = DataPemeriksaanAnak::where('anak_id', $id)->get();
+        return $pemeriksaan_anak;
 
         return view('pemeriksaan_anak.detail', compact('pemeriksaan_anak'));
     }
@@ -51,7 +53,7 @@ class DataPemeriksaanAnakController extends Controller
     public function updatePemeriksaanAnak($id)
     {
         $pemeriksaan_anak = DataPemeriksaanAnak::find($id);
-        $pemeriksaan_anak::update([
+        $pemeriksaan_anak->update([
             'anak_id' => request('anak_id'),
             'berat_badan' => request('berat_badan'),
             'tinggi_badan' => request('tinggi_badan'),

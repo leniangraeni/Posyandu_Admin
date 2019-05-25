@@ -20,5 +20,13 @@ class DataPemeriksaanIbuSeeder extends Seeder
             'lila' => '20',
             'tanggal_pemeriksaan' => '2019/11/12'
         ]);
+        DataPemeriksaanIbu::create([
+            'ibu_id' => '2',
+            'berat_badan' => '12',
+            'tinggi_badan' => '105',
+            'tensi' => '16',
+            'lila' => '12',
+            'tanggal_pemeriksaan' => '2019/11/12'
+        ]);
     }
 }

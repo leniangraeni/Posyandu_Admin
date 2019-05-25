@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(IbuSeeder::class);
         // $this->call(JadwalPosyanduSeeder::class);
-        $this->call(AnakSeeder::class);
+        // $this->call(AnakSeeder::class);
+        // $this->call(DataPemeriksaanIbuSeeder::class);
+        $this->call(DataPemeriksaanAnakSeeder::class);
+
     }
 }

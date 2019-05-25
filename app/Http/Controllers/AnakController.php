@@ -39,7 +39,6 @@ class AnakController extends Controller
     public function detailDataAnak($id)
     {
         $anak = Anak::find($id);
-
         return view('anak.detail', compact('anak'));
     }
 
@@ -53,7 +52,7 @@ class AnakController extends Controller
     public function updateDataAnak($id)
     {
         $anak = Anak::find($id);
-        $anak::update([
+        $anak->update([
             'ibu_id' => request('ibu_id'),
             'nama' => request('nama'),
             'nik' => request('nik'),
@@ -63,7 +62,7 @@ class AnakController extends Controller
             'gol_darah' => request('gol_darah')
         ]);
 
-        return redirect()-back();
+        return redirect()->route('anak.index', compact('anak'));
     }
 
     public function hapusDataAnak($id)

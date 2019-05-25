@@ -19,5 +19,12 @@ class DataPemeriksaanAnakSeeder extends Seeder
             'imunisasi' => 'Flu',
             'tanggal_pemeriksaan' => '2019/12/11'
         ]);
+        DataPemeriksaanAnak::create([
+            'anak_id' => '3',
+            'berat_badan' => '12',
+            'tinggi_badan' => '45',
+            'imunisasi' => 'FluHAHA',
+            'tanggal_pemeriksaan' => '2019/12/11'
+        ]);
     }
 }

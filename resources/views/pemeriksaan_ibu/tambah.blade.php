@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-            <div class="panel-heading">Tambah Data Pemeriksaan Anak</div>
+            <div class="panel-heading">Tambah Data Pemeriksaan Anak2</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('pemeriksaan_ibu.simpan', $ibu) }}">
                         {{ csrf_field() }}

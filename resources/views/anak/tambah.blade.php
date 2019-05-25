@@ -28,7 +28,7 @@
                             <label for="nik" class="col-md-4 control-label">NIK</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="nik">  
+                                <input type="number" class="form-control" name="nik">  
                             </div>
                         </div>
 

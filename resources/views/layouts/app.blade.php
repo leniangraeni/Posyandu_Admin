@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+ 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -53,8 +53,8 @@
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
-                            <li><a href="{{ route('jadwal.tambah') }}">Tambah Jadwal</a></li>
-                            <li><a href="{{ route('ibu.tambah') }}">Tambah Data Ibu</a></li>
+                            <li><a href="{{ route('jadwal.index') }}">Jadwal</a></li>
+                            <li><a href="{{ route('ibu.index') }}">Data Ibu</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>

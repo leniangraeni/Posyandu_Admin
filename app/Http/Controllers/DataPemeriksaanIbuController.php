@@ -29,16 +29,15 @@ class DataPemeriksaanIbuController extends Controller
         return redirect()->route('ibu.detail', compact('ibu'));
     }
 
-    public function readPemeriksaanIbu(Ibu $ibu)
+    public function readPemeriksaanIbu()
     {
-        $pemeriksaan_ibu = DataPemeriksaanIbu::where('ibu_id', $ibu->id)->get();
-        return view('pemeriksaan_ibu.index', compact('pemeriksan_ibu'));
+        $pemeriksaan_ibu = DataPemeriksaanIbu::all();
+        return view('pemeriksaan_ibu.index', compact('pemeriksaan_ibu'));
     }
 
     public function detailPemeriksaanIbu($id)
     {
-        $pemeriksaan_ibu = DataPemeriksaanIbu::find($id);
-
+        $pemeriksaan_ibu = DataPemeriksaanIbu::where('ibu_id',$id)->get();
         return view('pemeriksaan_ibu.detail', compact('pemeriksaan_ibu'));
     }
 
@@ -52,7 +51,7 @@ class DataPemeriksaanIbuController extends Controller
     public function updatePemeriksaanIbu($id)
     {
         $pemeriksaan_ibu = DataPemeriksaanIbu::find($id);
-        $pemeriksaan-ibu::create([
+        $pemeriksaan_ibu->update([
             'ibu_id' => request('ibu_id'),
             'berat_badan' => request('berat_badan'),
             'tinggi_badan' => request('tinggi_badan'),

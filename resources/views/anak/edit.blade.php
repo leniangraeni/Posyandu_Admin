@@ -22,7 +22,7 @@
                             <label for="name" class="col-md-4 control-label">Nama</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ $anak->nama }}">  
+                                <input type="text" class="form-control" name="nama" value="{{ $anak->nama }}">  
                             </div>
                         </div>
 
@@ -73,7 +73,7 @@
                                     </button>
                                 </div>
                             </div>
-
+                        
                         </form>
                     </div>
                 </div>
